@@ -1,0 +1,5 @@
+ndn.cxx (0.2~rc1-ppa1~precise1) precise; urgency=low
+
+  * Initial release
+
+ -- Alexander Afanasyev <alexander.afanasyev@ucla.edu>  Tue, 05 Nov 2013 15:21:31 -0800
