@@ -7,7 +7,9 @@
 # This special exception was added by Craig Small in version 0.37 of dh-make.
 
 # Uncomment this to turn on verbose mode.
-export DH_VERBOSE=1
+# export DH_VERBOSE=1
+
+LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS) -Wl,--no-as-needed
 
 %:
 	dh $@ --parallel
@@ -21,11 +23,12 @@ override_dh_auto_build:
 override_dh_auto_install:
 	./waf install --destdir=debian/tmp
 
-+override_dh_auto_clean:
+override_dh_auto_clean:
 	./waf distclean
 
 override_dh_clean:
 	dh_clean
+	./waf distclean
 	rm -rf .waf*
 	rm -f waf-tools/*.pyc
 

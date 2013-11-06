@@ -1,3 +1,9 @@
+ndn.cxx (0.2~rc1-ppa2~precise1) precise; urgency=low
+
+  * Fixing linking problem by forcing -Wl,--no-as-needed LDFLAG
+
+ -- Alexander Afanasyev <alexander.afanasyev@ucla.edu>  Tue, 05 Nov 2013 22:34:54 -0800
+
 ndn.cxx (0.2~rc1-ppa1~precise1) precise; urgency=low
 
   * Initial release
