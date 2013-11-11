@@ -1,3 +1,12 @@
+ndn.cxx (0.2-1ppa1~precise1) precise; urgency=low
+
+  * Update security library doc
+  * Fixing the bug in constructor of wrapper (changing the default argument); Adding const get methods in Certificate
+  * Change the sleep method in TTL certificate cache, hopefully it will fix the hanging issue.
+  * Adding Macro to accomodating the difference of sleeping method in different boost::thread library.
+
+ -- Alexander Afanasyev <alexander.afanasyev@ucla.edu>  Sun, 10 Nov 2013 17:06:50 -0800
+
 ndn.cxx (0.2~rc1-ppa2~precise1) precise; urgency=low
 
   * Fixing linking problem by forcing -Wl,--no-as-needed LDFLAG

@@ -59,7 +59,7 @@ namespace security
       UniqueRecLock lock(m_mutex);
       m_running = false;
     }    
-
+    m_thread.interrupt();
     m_thread.join ();
 
   }
@@ -135,7 +135,15 @@ namespace security
                 }
             }
         }        
-        sleep(m_interval);
+        try{
+#if BOOST_VERSION >= 1050000
+          this_thread::sleep_for(chrono::seconds(m_interval));
+#else
+          this_thread::sleep(posix_time::seconds(m_interval));
+#endif
+        }catch(thread_interrupted& e){
+          break;
+        }
       }
   }
 
