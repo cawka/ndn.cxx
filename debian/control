@@ -9,10 +9,10 @@ Build-Depends: debhelper (>= 8.0.0),
  libsqlite3-dev (>= 3.7.9), 
  libevent-dev (>= 2.0.16),
  libcrypto++-dev (>= 5.6.1),
- libboost-system1.48-dev (>= 1.48.0), libboost-test1.48-dev (>= 1.48.0),
- libboost-iostreams1.48-dev (>= 1.48.0), libboost-filesystem1.48-dev (>= 1.48.0),
- libboost-thread1.48-dev (>= 1.48.0), libboost-date-time1.48-dev (>= 1.48.0),
- libboost-regex1.48-dev (>= 1.48.0), libboost-program-options1.48-dev (>= 1.48.0)
+ libboost-system-dev (>= 1.48.0), libboost-test-dev (>= 1.48.0),
+ libboost-iostreams-dev (>= 1.48.0), libboost-filesystem-dev (>= 1.48.0),
+ libboost-thread-dev (>= 1.48.0), libboost-date-time-dev (>= 1.48.0),
+ libboost-regex-dev (>= 1.48.0), libboost-program-options-dev (>= 1.48.0)
 Standards-Version: 3.9.2
 Section: libs
 Homepage: http://github.com/named-data/ndn.cxx
